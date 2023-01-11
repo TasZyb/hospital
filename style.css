@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+*{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    /* height: 100%; */
+    overflow-x: hidden;
+}
+.wraper{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative; 
+    overflow-x: hidden;
+}
+.header__back{
+    width: 0;
+    height: 0;
+    background-color: rgb(66, 158, 245);
+    position: absolute;
+}
+/* Верстка хедеру */
+.header__burger {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    top: -100px;
+}
+.header__burger span{
+    position: relative;
+    background-color: white;
+    width: 100%;
+    height: 2px;
+}
+.header__burger::before{
+    content: '';
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+.header__burger::after{
+    content: '';
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+.header__row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header{
+    background-color: rgb(66, 158, 245);
+    width: 100%;
+    padding: 10px 0;
+
+}
+.container{
+    padding: 0 110px;
+}
+.header__nav{
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__logo img{
+    width: 150px;
+}
+.header__logo{
+    flex: 1;
+}
+.header__list{
+    display: flex;
+    padding: 0;
+}
+.header__items{
+    list-style: none;
+    
+    margin: 0 40px;
+    
+}
+.header__items a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 1em;
+}
+.header__nubmer{
+    text-decoration: none;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+/* Верстка хедеру */
+
+/* ############################################################# */
+
+/* Верстка футеру */
+.footer{
+    background-color: rgb(66, 245, 185);
+    width: 100%;
+    padding: 10px 0;
+    margin-top: auto;
+
+}
+.footer__row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer__list{
+    padding: 0;
+}
+.footer__contact .footer__items:last-child{
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.footer__social .footer__items:last-child{
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.footer__items{
+    list-style: none;
+    margin: 10px 0;
+}
+.footer__items a{
+    text-decoration: none;
+    color: black;
+    
+}
+.footer__social .footer__list{
+    display: flex;
+    justify-content: space-between;
+}
+.footer__social img{
+    width: 40px;
+}
+
+/* Верстка футеру */
+
+
+/* ######################################### */
+
+/* Верстка блоків>>>>> */
+.message{
+    position: absolute;
+    bottom: 30px;
+    right: -230px;
+    width: 200px;
+    padding: 20px 0;
+    text-align: center;
+    background-color: rgba(172, 172, 172, 0);
+    border-radius: 10px;
+    color: rgba(172, 172, 172, 0);
+    pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Верстка блоків>>>>> */
+
+
+
+/* Медіа запроси */
+
+@media screen and (max-width: 1024px) {
+    .header__items{
+        list-style: none;
+        
+        margin: 0 20px;
+        
+    }
+
+}
+@media screen and (max-width: 768px) {
+    .header{
+    }
+    .header__back{
+        z-index: 3;
+        width: 100%;
+        height: 60px;
+        top: -10px;
+    }
+    .header__logo{
+        z-index: 5;
+    }
+    .header__row{
+        position: relative;
+    }
+    .header__burger{
+        position: relative;
+        top: auto;
+        z-index: 3;
+    }
+    .header__nav{
+        z-index: 2;
+        top: -120px;
+        width: 100%;
+        position: absolute;
+        flex-direction: column;
+        background-color: rgb(66, 158, 245);
+        transition-duration: 0.3s;
+        align-items: center;
+        text-align: center;
+        padding: 20px 0;
+    }
+    .header__nav p {
+        margin: 10px 0;
+    }
+    .header__list {
+        flex-direction: column;
+        margin: 0
+    }
+    .header__items {
+        margin: 10px 0;
+    }
+    .active__list{
+        top: 60px;
+    }
+}
+@media screen and (max-width: 768px) {
+   
+}
+@media screen and (max-width: 500px) {
+   .footer__row{
+    flex-direction: column;
+    text-align: center;
+   }
+}
+@media screen and (max-width: 425px) {
+   
+}
+
+
+/*  анімації */
+@keyframes mess {
+    0%{
+        right: 30px;
+        
+    }
+    1%{
+        background-color: rgba(172, 172, 172, 0);
+        color: rgba(0, 0, 0, 0);
+    }
+    25%{
+        right: 30px;
+        background-color: rgb(172, 172, 172);
+        color: rgb(0, 0, 0);
+    }
+    55%{
+        right: 30px;
+    }
+    75%{
+        right: 30px;
+        background-color: rgb(172, 172, 172);
+        color: rgb(0, 0, 0);
+    }
+    99%{
+        background-color: rgba(172, 172, 172, 0);
+        color: rgba(0, 0, 0, 0);
+    }
+    100%{
+        right: -230px;
+    }
+}
