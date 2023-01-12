@@ -2,13 +2,16 @@
 *{
     font-family: 'Roboto Condensed', sans-serif;
 }
-
+.scroll__lock{
+    overflow: hidden;
+}
 body{
     padding: 0;
     margin: 0;
     /* height: 100%; */
     overflow-x: hidden;
 }
+
 .wraper{
     min-height: 100vh;
     display: flex;
@@ -16,13 +19,16 @@ body{
     position: relative; 
     overflow-x: hidden;
 }
+
 .header__back{
     width: 0;
     height: 0;
-    background-color: rgb(66, 158, 245);
+    background-color: rgb(119, 156, 252);
     position: absolute;
 }
+
 /* Верстка хедеру */
+
 .header__burger {
     position: absolute;
     display: flex;
@@ -32,12 +38,14 @@ body{
     height: 20px;
     top: -100px;
 }
+
 .header__burger span{
     position: relative;
     background-color: white;
     width: 100%;
     height: 2px;
 }
+
 .header__burger::before{
     content: '';
     position: relative;
@@ -45,6 +53,7 @@ body{
     height: 2px;
     background-color: white;
 }
+
 .header__burger::after{
     content: '';
     position: relative;
@@ -58,47 +67,54 @@ body{
     justify-content: space-between;
     align-items: center;
 }
+
 .header{
-    background-color: rgb(66, 158, 245);
+    background-color: rgb(90, 189, 254);
     width: 100%;
     padding: 10px 0;
-
 }
+
 .container{
     padding: 0 110px;
 }
+
 .header__nav{
     flex: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .header__logo img{
-    width: 150px;
+    width: 120px;
 }
+
 .header__logo{
     flex: 1;
 }
+
 .header__list{
     display: flex;
     padding: 0;
 }
+
 .header__items{
     list-style: none;
-    
     margin: 0 40px;
-    
 }
+
 .header__items a{
     color: whitesmoke;
     text-decoration: none;
     font-size: 1em;
 }
+
 .header__nubmer{
     text-decoration: none;
     color: white;
     padding: 0;
     margin: 0;
+    cursor: pointer;
 }
 /* Верстка хедеру */
 
@@ -135,7 +151,6 @@ body{
 .footer__items a{
     text-decoration: none;
     color: black;
-    
 }
 .footer__social .footer__list{
     display: flex;
@@ -144,15 +159,16 @@ body{
 .footer__social img{
     width: 40px;
 }
-
+.save__text{
+    cursor: pointer;
+}
 /* Верстка футеру */
-
 
 /* ######################################### */
 
 /* Верстка блоків>>>>> */
 .message{
-    position: absolute;
+    position: fixed;
     bottom: 30px;
     right: -230px;
     width: 200px;
@@ -164,16 +180,46 @@ body{
     pointer-events: none;
 }
 
-
-
-
-
-
-
-
-
-
-
+.doctors{
+    padding: 50px 0;
+}
+.doctors__line{
+    margin:  0 0 50px 0;
+    background-color: rgb(130, 130, 130);
+}
+.doctors__title{
+    font-size: 3em;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+.doctors__row{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.doctors__article{
+    width: 21%;
+    text-align: center;
+}
+.doctors__picture{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-position: center center;
+    background-size: cover;
+    margin: 0 auto;
+    filter: grayscale(1);
+    transition-duration: .5s;
+    border: 2px solid rgb(63, 135, 207);
+}
+.doctors__article:hover .doctors__picture{
+    background-color: black;
+    filter: grayscale(0);
+    transform: scale(105%);
+    border-radius: 50%;
+}
 
 
 
@@ -187,22 +233,43 @@ body{
 /* Медіа запроси */
 
 @media screen and (max-width: 1024px) {
+    .container{
+        padding: 0 90px;
+    }
     .header__items{
         list-style: none;
-        
-        margin: 0 20px;
-        
+        margin: 0 20px;  
+    }
+    .doctors__row{
+        justify-content: space-around;
+    }
+    .doctors__article{
+        width: 30%;
+        text-align: center;
+    }
+    .doctors__picture{
+        width: 150px;
+        height: 150px;
     }
 
 }
 @media screen and (max-width: 768px) {
     .header{
     }
+    .doctors__picture{
+        width: 120px;
+        height: 120px;
+    }
     .header__back{
         z-index: 3;
         width: 100%;
         height: 60px;
-        top: -10px;
+        top: -35px;
+    }
+
+    .doctors__article{
+        width: 40%;
+        text-align: center;
     }
     .header__logo{
         z-index: 5;
@@ -215,9 +282,30 @@ body{
         top: auto;
         z-index: 3;
     }
+    .active__burger span{
+        background-color: rgb(255,255,255,0);
+        /* transition-duration: .3s; */
+    }
+    .active__burger{
+        justify-content: center;
+        animation: burg 2.5s;
+    }
+    .active__burger::before{
+        position: absolute;
+        transform: rotate(45deg);
+        transition-duration: .3s;
+        /* top: 50%; */
+    }
+    .active__burger::after{
+        transform: rotate(-45deg);
+        position: absolute;
+        transition-duration: .3s;
+        /* bottom: 50%; */
+    }
     .header__nav{
         z-index: 2;
-        top: -120px;
+        top: -150px;
+        border-radius: 10px;
         width: 100%;
         position: absolute;
         flex-direction: column;
@@ -251,7 +339,17 @@ body{
    }
 }
 @media screen and (max-width: 425px) {
-   
+    .doctors__article{
+        width: 80%;
+        justify-content: center;
+    }
+    .doctors__row {
+        justify-content: center;
+        
+    }
+    .container{
+        padding: 0 30px;
+    }
 }
 
 
@@ -286,3 +384,14 @@ body{
         right: -230px;
     }
 }
+/* @keyframes burg {
+    0%{
+        width: 30px;
+    }
+    50%{
+        width: 20px;
+    }
+    100%{
+        width: 20px;
+    }
+} */
