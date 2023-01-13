@@ -1,4 +1,7 @@
 let doctorsRow = document.querySelector(".doctors__row");
+
+
+
 const worker = [
     {
         "picture": "../img/1.JPG",
@@ -8,7 +11,7 @@ const worker = [
     {
         "picture": "../img/2.JPG",
         "name": "Врач 1",
-        "profesion": "Професія"
+        "profesion": "лікар"
     },
     {
         "picture": "../img/1.JPG",
