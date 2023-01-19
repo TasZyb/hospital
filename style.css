@@ -296,13 +296,19 @@ body{
 .news__artile{
     /* position: ; */
     min-width: 100%;
-    background-image: url(img/all.JPG);
+    
     background-position: center center;
     background-size: cover;
     padding: 130px 0;
     text-align: center;
     position: relative;
     
+}
+.news__artile:first-child{
+    background-image: url(img/all2.JPG);
+}
+.news__artile:last-child{
+    background-image: url(img/house.JPG);
 }
 .news__artile:hover .news__back{
     background-color: rgba(0, 0, 255, 0);
@@ -431,11 +437,56 @@ body{
 
 
 /* Медіа запроси */
+.header__burger{
+    cursor: pointer;
+}
+.map{
+    /* position: relative; */
+    height: 300px;
+}
+.maps{
+    position: relative;
+    padding: 20px 0;
+}
+.maps h1{
+    text-align: center;
+    font-size: 2em;
 
-
-
-
-
+}
+.maps__row{
+    width: 80%;
+    margin: 0 auto;
+}
+.photo{
+    width: 100%;
+    position: relative;
+    padding: 20px 0;
+}
+.photo__row{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.photo__item{
+    background-image: url(img/obl1.JPG);
+    height: 200px;
+    width: 30%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+.photo__item:first-child{
+    background-image: url(img/IMG_5687.JPG);
+}
+.photo__item:last-child{
+    background-image: url(img/obl2.JPG);
+}
+.photo h1{
+    text-align: center;
+    font-size: 2em;
+}
 @media screen and (max-width: 1024px) {
     .container{
         padding: 0 90px;
@@ -458,6 +509,19 @@ body{
 
 }
 @media screen and (max-width: 768px) {
+    .header__cover{
+        flex-direction: column;
+
+    }
+    .header__article{
+        margin-bottom: 10px;
+    }
+    .photo__item{
+        height: 150px;
+    }
+    .news__contain, .faq__row, .maps__row, .photo__row{
+        width: 100%;
+    }
     .header{
     }
     .doctors__picture{
@@ -541,7 +605,23 @@ body{
     flex-direction: column;
     text-align: center;
    }
+   .header__article{
+    width: 100%;
+   }
+   .header__main{
+    width: 100%;
+   }
 }
+@media screen and (max-width: 600px) {
+    .photo__item{
+     width: 100%;
+     margin: 0 auto;
+     margin-bottom: 10px;
+    }
+    .photo__row{
+        flex-wrap: wrap;
+    }
+ }
 @media screen and (max-width: 425px) {
     .doctors__article{
         width: 80%;

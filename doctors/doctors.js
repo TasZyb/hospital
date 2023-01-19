@@ -30,8 +30,8 @@ const worker = [
     }
 ]
 
-let html = '';
-
+let htmlArticle = '';
+let info = '';
 worker.forEach(e => {
     const item = `
     <article class="doctors__article">
@@ -42,7 +42,9 @@ worker.forEach(e => {
     </article>
     `
 
-    html += item
+    htmlArticle += item
 });
 
-doctorsRow.innerHTML = html 
+doctorsRow.innerHTML = htmlArticle 
+let article = document.querySelectorAll(".doctors__article")
+console.log(article);
