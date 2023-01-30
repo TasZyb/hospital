@@ -2,6 +2,57 @@
 *{
     font-family: 'Roboto Condensed', sans-serif;
 }
+
+.popap{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    width: 40%;
+    height: auto;
+    background-color: aquamarine;
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 201;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+.activePopap{
+    position: fixed;
+    opacity: 1;
+    pointer-events: all;
+}
+.back__opasity{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+    z-index: 200;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+.popupBg{
+    position: fixed;
+    opacity: 1;
+    pointer-events: all;
+    
+}
+.popap__img{
+    margin: 0 auto;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    background-image: url(img/1.JPG);
+}
+
+
+
 .scroll__lock{
     overflow: hidden;
 }
@@ -75,14 +126,21 @@ body{
    
 }
 
-.header{
-    background-image: url(img/all.JPG);
+.header, .headerD{
+    /* background-image: url(img/uzd.jpg); */
     background-size: cover;
     background-position: center ;
     
     position: relative;
     width: 100%;
     padding: 10px 0;
+}
+.header{
+    background-image: url(img/uzd.jpg);
+}
+.headerD{
+    background: linear-gradient(to right top, #00D2FC, #00E1ED, #78F6AD, #B9FA8A, #F9F871);
+    
 }
 .header::after{
     content: '';
@@ -106,17 +164,20 @@ body{
 }
 
 .header__logo img{
-    width: 120px;
+    width: 200px;
 }
 
 .header__logo{
     flex: 1;
     z-index: 100;
+    width: 200px;
 }
 
 .header__list{
     display: flex;
     padding: 0;
+    /* justify-content: space-between; */
+    flex: 2;
 }
 
 .header__items{
@@ -144,17 +205,18 @@ body{
     /* justify-content: space-between; */
 }
 .header__article{
-    background-color: white;
+    background: linear-gradient( #48A9FE,#0BEEF9);
     border-radius: 10px;
     margin-right: 10px;
     padding: 10px;
     width: 300px;
     z-index: 99;
+    color: white;
 }
 .header__items a{
     color: rgb(255, 255, 255);
     text-decoration: none;
-    font-size: 1em;
+    font-size: 1.2em;
     z-index: 100;
 }
 
@@ -165,6 +227,7 @@ body{
     margin: 0;
     cursor: pointer;
     z-index: 100;
+    font-size: 1.2em;
 }
 /* Верстка хедеру */
 
@@ -172,10 +235,16 @@ body{
 
 /* Верстка футеру */
 .footer{
-    background-color: rgb(66, 245, 185);
+    background: linear-gradient(to right top, #00D2FC, #00E1ED, #78F6AD, #B9FA8A, #F9F871);
     width: 100%;
     padding: 10px 0;
     margin-top: auto;
+    
+
+}
+.footer *{
+    color: white !important;
+
 
 }
 .footer__row{
@@ -197,6 +266,9 @@ body{
 .footer__items{
     list-style: none;
     margin: 10px 0;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
 }
 .footer__items a{
     text-decoration: none;
@@ -233,6 +305,9 @@ body{
 
 .doctors{
     padding: 50px 0;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
 }
 .doctors__line{
     margin:  0 0 50px 0;
@@ -244,13 +319,18 @@ body{
     text-align: center;
 }
 .doctors__row{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    /* justify-content: flex-start; */
     width: 100%;
+    column-gap: 50px;
+    row-gap: 50px;
+    grid-template-columns: 30% 30% 30%;
+    /* /* justify-content: space-between; */
     flex-wrap: wrap;
+    margin: 0 auto;
 }
 .doctors__article{
-    width: 21%;
+    /* width: 21%; */
     text-align: center;
 }
 .doctors__picture{
@@ -261,8 +341,9 @@ body{
     background-position: center center;
     background-size: cover;
     margin: 0 auto;
-    filter: grayscale(1);
+    /* filter: grayscale(1); */
     transition-duration: .5s;
+    transition-property: transform, filter;
     border: 2px solid rgb(63, 135, 207);
 }
 .doctors__article:hover .doctors__picture{
@@ -374,7 +455,8 @@ body{
     
 }
     
-.faq-item{border: 1px solid  linear-gradient(to right,#df1ba4, #303892);;
+.faq-item{border: 1px solid  linear-gradient(to right,#df1ba4, #303892);
+    
         /* background-color: rgb(66, 245, 185); */
         margin-bottom: 5px;
 }
@@ -392,7 +474,7 @@ body{
     display: block;
     cursor: pointer;
     padding: 10px 15px;
-    background-color: rgb(66, 245, 185);
+    background: linear-gradient(to right top, #00D2FC, #00E1ED, #78F6AD, #B9FA8A, #F9F871);
 }
     
 .faq-title:hover{background-color: rgb(136, 132, 132);
@@ -422,7 +504,7 @@ body{
     justify-content: space-between;
     border: 1px solid #C8C8C8;
     margin: 5px 0;
-    background-color: rgb(224, 224, 224);
+    background-color: white;
     padding: 10px 10px;
 }
     
@@ -469,6 +551,7 @@ body{
     display: flex;
     justify-content: space-between;
 }
+
 .photo__item{
     background-image: url(img/obl1.JPG);
     height: 200px;
@@ -493,13 +576,13 @@ body{
     }
     .header__items{
         list-style: none;
-        margin: 0 20px;  
+        /* margin: 0 20px;   */
     }
     .doctors__row{
-        justify-content: space-around;
+        
     }
     .doctors__article{
-        width: 30%;
+        /* width: 30%; */
         text-align: center;
     }
     .doctors__picture{
@@ -512,6 +595,10 @@ body{
     .header__cover{
         flex-direction: column;
 
+    }
+    .doctors__row{
+        grid-template-columns: 40% 40%;
+        justify-content: center;
     }
     .header__article{
         margin-bottom: 10px;
@@ -536,8 +623,9 @@ body{
     }
 
     .doctors__article{
-        width: 40%;
+        /* width: 40%; */
         text-align: center;
+        
     }
     .header__logo{
         z-index: 5;
@@ -597,9 +685,7 @@ body{
         top: 60px;
     }
 }
-@media screen and (max-width: 768px) {
-   
-}
+
 @media screen and (max-width: 500px) {
    .footer__row{
     flex-direction: column;
@@ -617,6 +703,10 @@ body{
      width: 100%;
      margin: 0 auto;
      margin-bottom: 10px;
+    }
+    .doctors__row{
+        grid-template-columns: 80%;
+        justify-content: center;
     }
     .photo__row{
         flex-wrap: wrap;
