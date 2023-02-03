@@ -7,11 +7,7 @@ const newsPrev = document.querySelector(".news__prev");
 const newsNext = document.querySelector(".news__next");
 const newsRows = document.querySelector(".news__rows");
 
-
-
-
 number.forEach(e =>{
-    
     e.addEventListener("click", () => { 
         console.log(number);
         navigator.clipboard.writeText(e.innerHTML);
@@ -20,9 +16,7 @@ number.forEach(e =>{
             message.style.animation = "mess 2.5s";
           }, 1);
     });
-})
-
-
+});
 burger.addEventListener("click", () => { 
     burger.classList.toggle("active__burger");
     burger__list.classList.toggle("active__list");
@@ -30,7 +24,6 @@ burger.addEventListener("click", () => {
 });
 newsPrev.addEventListener("click", () => {
     let move = document.querySelector(".news__rows").offsetWidth;
-
     newsRows.style.left = "0px";
     console.log(move);
     newsPrev.style.backgroundColor = "rgb(71, 129, 109)";
@@ -38,11 +31,8 @@ newsPrev.addEventListener("click", () => {
 });
 newsNext.addEventListener("click", () => {
     let move = document.querySelector(".news__rows").offsetWidth;
-
     newsRows.style.left = (move*-1).toString() + "px";
     console.log(move);
     newsNext.style.backgroundColor = "rgb(71, 129, 109)";
     newsPrev.style.backgroundColor = "aquamarine";
 });
-
-

@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Med Expert</title>
     <link rel="stylesheet" href="style.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+
 </head>
 <body>
     
@@ -40,10 +45,10 @@
                     <div class="header__cover">
 
                         <article class="header__article">
-                            <p>Точна діагностика</p>
+                            <p>Узд-діагностика</p>
                         </article>
                         <article class="header__article">
-                            <p>Великий практичний досвід</p>
+                            <p>Консультації</p>
                         </article>
                         <article class="header__article">
                             <p>Індивідуальний підхід</p>
@@ -52,35 +57,97 @@
             </div>
         </header>
         <main class="main">
+        
             <div class="news">
                 <div class="container">
-                    <div class="news__contain">
-                        <div class="news__rows">
-                            <article class="news__artile">
-                                
-                                <h2>Наші працівники</h2>
-                                <a href="doctors/doctors.html" class="news__link">Читати більше...</a>
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                          <!-- Slides -->
+                          <div class="swiper-slide">
+                            <article class="news__artile" style="background-image: url(img/all.jpg);">
+                                <div class="article__cont">
+                                    <h2>Наші працівники</h2>
+                                    <a href="doctors/doctors.html" class="news__link">Читати більше...</a>
+                                </div>
                                 <div class="news__back gray"></div>
                             </article>
-                            <article class="news__artile">
-                                <h2>Це ми</h2>
-                                <a href="#anchor" class="news__link">Читати більше...</a>
+                          </div>
+                          <div class="swiper-slide">
+                            <article class="news__artile" style="background-image: url(img/house.JPG);">
+                                <div class="article__cont">
+                                    <h2>Це ми</h2>
+
+                                    <a href="#anchor" class="news__link">Подивитись де ми...</a>
+                                </div>
+                                <div class="news__back gray"></div>
+                                
+                            </article>
+                          </div>
+                          <div class="swiper-slide">
+                            <article class="news__artile"  style="background-image: url(img/slide6.jpg);">
+                                <div class="article__cont">
+                                    <h2></h2>
+
+                                    <a href="#anchor" class="news__link"></a>
+                                </div>
                                 <div class="news__back gray"></div>
                             </article>
                         </div>
-                    </div>
-                    <div class="news__nav">
-                        <button class="news__prev"></button>
-                        <button class="news__next"></button>
-                    </div>
+                          <div class="swiper-slide">
+                            <article class="news__artile"  style="background-image: url(img/slide3.jpg);">
+                                <div class="article__cont">
+                                    <h2></h2>
 
+                                    <a href="#anchor" class="news__link"></a>
+                                </div>
+                                <div class="news__back gray"></div>
+                            </article>
+                        </div>
+                          <div class="swiper-slide">
+                            <article class="news__artile"  style="background-image: url(img/slide5.jpg);     background-position: top;">
+                                <div class="article__cont">
+                                    <h2></h2>
 
-
-
-
-
+                                    <a href="#anchor" class="news__link"></a>
+                                </div>
+                                <div class="news__back gray"></div>
+                            </article>
+                        </div>
+                          
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                      
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                      
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                      </div>
+                    <!-- <div class="slider">
+                        <ul>
+                            <li><img src="i/1.jpg" alt="">
+                                
+                            </li>
+                            <li><img src="i/2.jpg" alt="">
+                                
+                            </li>
+                            <li><img src="i/3.jpg" alt="">
+                                
+                            </li>
+                            <li><img src="i/4.jpg" alt="">
+                                
+                            </li>
+                            <li><img src="i/5.jpg" alt="">
+                                
+                            </li>
+                        </ul>
+                    </div> -->
                 </div>
             </div>
+            
             <div class="faq">
                 
                 <div class="container">
@@ -93,69 +160,92 @@
                         <label class="faq-title" for="faq-6">УЗД діагностика</label>
                         <div class="faq-text">
         
-                            <div class="table">
-                                <div class="inf"> Дуплексне сканування судин шиї
-                                    (Гілки дуги аорти)</div>
-                                <div class="price">200грн</div>
-                            </div>
-                            <div class="table">
-                                <div class="inf">Дуплексне сканування судин
-                                    нижніх кінцівок(1 кінцівка)</div>
-                                <div class="price">400/200грн</div>
-                            </div>
-                            <div class="table">
-                                <div class="inf">Дуплексне сканування судин нижніх кінцівок (2 кінцівки)</div>
-                                <div class="price">400/200грн</div>
-                            </div>
-
-                            <div class="table">
-                                <div class="inf">Дуплексне сканування судин + консультація флеболога </div>
-                                <div class="price">950грн</div>
-                            </div>
-
+                            <div class="table__content">
                                 <div class="table">
-                                    <div class="inf">Нирки + сечовий міхур</div>
-                                    <div class="price">400грн</div>
+                                    <div class="inf"> УЗД урологія</div>
+                                    <div class="price"></div>
                                 </div>
-
-                                <div class="table">
-                                    <div class="inf">УЗД нирок</div>
-                                    <div class="price">300грн</div>
-                                </div>
-                                <div class="table">
-                                    <div class="inf">Комплекс для чоловіків(нирки, сечовий міхур<br>
+                                <div class="table__dodat">
+                                    <div class="inf">Комплекс для чоловіків (нирки, сечовий міхур<br>
                                     простата + калитка)</div>
-                                    <div class="price">600грн</div>
+                                    <div class="price">600 грн</div>
                                 </div>
+                                <div class="table__dodat">
+                                    <div class="inf">Простати + сечовий міхур (трансректально)</div>
+                                    <div class="price">450 грн</div>
+                                </div>
+                                <div class="table__dodat">
+                                    <div class="inf">Нирки + сечовий міхур</div>
+                                    <div class="price">400 грн</div>
+                                </div>
+                             
+                            </div>
+
+
+                            <div class="table__content">
                                 <div class="table">
-                                    <div class="inf">Простати + сечовий міхур(трансректально)</div>
-                                    <div class="price">450грн</div>
+                                    <div class="inf"> УЗД судин</div>
+                                    <div class="price"></div>
                                 </div>
-                                    <div class="table">
-                                        <div class="inf">УЗД діагностика суглобів (1суглоб)</div>
-                                        <div class="price">350грн</div>
+                                <div class="table__dodat">
+                                    <div class="inf">Дуплексне сканування судин + консультація флеболога </div>
+                                    <div class="price">900 грн</div>
+                                </div>
+                               
+                                <div class="table__dodat">
+                                    <div class="inf">Дуплексне сканування судин
+                                        нижніх кінцівок (1 кінцівка)</div>
+                                    <div class="price">400 грн</div>
+                                </div>
+                                <div class="table__dodat">
+                                    <div class="inf">Дуплексне сканування судин нижніх кінцівок (2 кінцівки)</div>
+                                    <div class="price">600 грн</div>
+                                </div>
+                                <div class="table__dodat">
+                                    <div class="inf"> Дуплексне сканування судин шиї
+                                        (Гілки дуги аорти)</div>
+                                    <div class="price">400 грн</div>
+                                </div>
+                               
+                            </div>
+
+
+                            <div class="table__content">
+                                <div class="table">
+                                    <div class="inf"> УЗД діагностика</div>
+                                    <div class="price"></div>
+                                </div>
+                                <div class="table__dodat">
+                                    <div class="inf">УЗД діагностика суглобів (1 суглоб)</div>
+                                    <div class="price">350 грн</div>
+                                </div>
+                                <div class="table__dodat">
+                                    <div class="inf">Парні суглоби</div>
+                                    <div class="price">500 грн</div>
+                                </div>
+                                    <div class="table__dodat">
+                                        <div class="inf">Щитовидна залоза</div>
+                                        <div class="price">300 грн</div>
                                     </div>
-                                    <div class="table">
-                                        <div class="inf">Парні суглоби</div>
-                                        <div class="price">500грн</div>
+                                    <div class="table__dodat">
+                                        <div class="inf">Черевна порожнина + нирки + сечовий міхур</div>
+                                        <div class="price">550 грн</div>
                                     </div>
-                                        <div class="table">
-                                            <div class="inf">Щитовидна залоза</div>
-                                            <div class="price">300грн</div>
-                                        </div>
-                                        <div class="table">
-                                            <div class="inf">Черевна порожнина + нирки + сечовий міхур</div>
-                                            <div class="price">550грн</div>
-                                        </div>
-                                        <div class="table">
-                                            <div class="inf">Черевна порожнина(печінка, жовчний міхур,<br>
-                                                підшлункова залоза,селезінка)</div>
-                                            <div class="price">450грн</div>
-                                        </div>
-                                            <div class="table">
-                                                <div class="inf">Органи малого тазу (матка + яйники)</div>
-                                                <div class="price">400грн</div>
-                                        </div>
+                                    <div class="table__dodat">
+                                        <div class="inf">Черевна порожнина (печінка, жовчний міхур,<br>
+                                            підшлункова залоза,селезінка)</div>
+                                        <div class="price">450 грн</div>
+                                    </div>
+                                        <div class="table__dodat">
+                                            <div class="inf">Органи малого тазу (матка + яйники)</div>
+                                            <div class="price">400 грн</div>
+                                    </div>
+                                    <div class="table__dodat">
+                                        <div class="inf">УЗД нирок</div>
+                                        <div class="price">300 грн</div>
+                                    </div>
+                               
+                            </div>
                         </div>
                     </div>
         
@@ -163,21 +253,21 @@
                         <input class="faq-input" type="checkbox" name="faq_4" id="faq-2">
                         <label class="faq-title" for="faq-2">Кардіологія</label>
                         <div class="faq-text">
-                            <div class="table">
+                            <div class="table green">
                                 <div class="inf"> Консультація </div>
-                                <div class="price">400грн</div>
+                                <div class="price">400 грн</div>
                             </div>
-                            <div class="table">
+                            <div class="table green">
                                 <div class="inf">Повторна консультація</div>
-                                <div class="price">250грн</div>
+                                <div class="price">250 грн</div>
                             </div>
-                            <div class="table">
+                            <div class="table green"  >
                                 <div class="inf">Консультація кардіолога + ЕКГ</div>
-                                <div class="price">550грн</div>
+                                <div class="price">550 грн</div>
                             </div>
-                            <div class="table">
+                            <div class="table green">
                                 <div class="inf">Електрокардіографія (ЕКГ) з трактуванням результату</div>
-                                <div class="price">200грн</div>
+                                <div class="price">200 грн</div>
                             </div>
                         </div>
                     </div>
@@ -186,44 +276,61 @@
                         <input class="faq-input" type="checkbox" name="faq_4"id="faq-3">
                         <label class="faq-title"  for="faq-3">Ендокринологія</label></label>
                     <div class="faq-text">
-                        <div class="table">
+                        <div class="table green">
                             <div class="inf"> Консультація </div>
-                            <div class="price">400грн</div>
+                            <div class="price">400 грн</div>
                         </div>
-                        <div class="table">
+                        <div class="table green">
                             <div class="inf">Повторна консультація</div>
-                            <div class="price">200грн</div>
+                            <div class="price">200 грн</div>
                         </div>
                     </div>
                 </div>
+                <div class="faq-item" name="name">
+                    <input class="faq-input" type="checkbox" name="faq_5"id="faq-5">
+                    <label class="faq-title"  for="faq-5">Флебологія</label></label>
+                <div class="faq-text">
+                    <div class="table green">
+                        <div class="inf"> Консультація хірурга флеболога </div>
+                        <div class="price">500 грн</div>
+                    </div>
+                    <div class="table green">
+                        <div class="inf">Комплекс флебологія: консультація хірурга флеболога + дуплексне сканування судин</div>
+                        <div class="price">900 грн</div>
+                    </div>
+                </div>
+            </div>
         
                     <div class="faq-item">
                         <input class="faq-input" type="checkbox" name="faq_4" id="faq-4">
                         <label class="faq-title" for="faq-4" >Урологія </label>
                         <div class="faq-text">
-                            <div class="table">
+                            <div class="table green">
                                 <div class="inf"> Консультація </div>
-                                <div class="price">300грн</div>
+                                <div class="price">400 грн</div>
                             </div>
-                            <div class="table">
+                            <div class="table green">
                                 <div class="inf">Повторна консультація</div>
-                                <div class="price">200грн</div>
+                                <div class="price">200 грн</div>
                             </div>
-                            <div class="table">
+                            <div class="table green">
                                 <div class="inf">Узд органів сечостатевої системи</div>
-                                <div class="price">250грн</div>
+                                <div class="price">400 грн</div>
                             </div>
-                            <div class="table">
+                            <div class="table green">
                                 <div class="inf">Масаж простати (1 сеанс) </div>
-                                <div class="price">150грн</div>
+                                <div class="price">150 грн</div>
                             </div>
-                            <div class="table">
+                            <div class="table green">
                                 <div class="inf">Забір матеріалу на дослідження (мазок, відбиток, сік простати)</div>
-                                <div class="price">160грн</div>
+                                <div class="price">160 грн</div>
                             </div>
                     </div>
                     </div>
+                    
                     </div>
+
+                    
                 </div>
             </div>
         <section class="maps" id="anchor">
@@ -267,8 +374,8 @@
                     <div class="footer__social ">
                         <h3 class="footer__title">Соціальні мережі</h3>
                         <ul class="footer__list">
-                            <li class="footer__items"><a href="index.html"><img src="img/insta.png" alt=""></a></li>
-                            <li class="footer__items"><a href="index.html"><img src="img/telegram.png" alt=""></a></li>
+                            <li class="footer__items"><a href="https://instagram.com/med_expert_zhovkva?igshid=YmMyMTA2M2Y="><img src="img/insta.png" alt=""></a></li>
+                            <li class="footer__items"><a href="https://www.facebook.com/MedExpert-116880277959632/"><img src="img/facebook-app-symbol.png" alt=""></a></li>
                             
                         
                         </ul>
@@ -278,7 +385,9 @@
             </div>
         </footer>
     </div>
-     
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="slide.js"></script>
     <script src="script.js"></script>
     <script src="map.js"></script>
     <script async
